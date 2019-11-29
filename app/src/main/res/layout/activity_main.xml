@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/enterWeight"
+            style="@style/MyStyle"
+            android:text="@string/enter_weight_kg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/inputWeight"
+            style="@style/MyInputStyle"
+            android:inputType="numberDecimal"
+            app:layout_constraintBaseline_toBaselineOf="@+id/enterWeight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/enterWeight" />
+
+        <TextView
+            android:id="@+id/enterHeight"
+            style="@style/MyStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/enter_height_m"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/enterWeight" />
+
+        <EditText
+            android:id="@+id/inputHeight"
+            style="@style/MyInputStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            app:layout_constraintBaseline_toBaselineOf="@+id/enterHeight"
+            app:layout_constraintStart_toEndOf="@+id/enterHeight" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.653"
+            app:srcCompat="@drawable/empty" />
+
+        <TextView
+            android:id="@+id/textWeight"
+            style="@style/MyStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Default"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.489"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintVertical_bias="0.089" />
+
+        <Button
+            android:id="@+id/doneButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Done"
+            app:layout_constraintBaseline_toBaselineOf="@+id/resetButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.232"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reset"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.48"
+            app:layout_constraintStart_toEndOf="@+id/doneButton"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.29" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
